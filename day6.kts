@@ -23,7 +23,7 @@ fun countChars(data: String, size: Int, step: Int = 1): Int {
 }
 
 fun main() {
-    val data = File("s6.txt").readText()
+    val data = File("input/s6.txt").readText()
     println("part 1: " + countChars(data, 4))
     println("part 2: " + countChars(data, 14))
 }

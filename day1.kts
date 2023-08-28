@@ -6,8 +6,7 @@ fun solve(s: List<String>) = s.fold(mutableListOf(0)) { sum, cal ->
 }
 
 fun main() {
-    val input = File("s1.txt").readLines()
+    val input = File("input/s1.txt").readLines()
     println("part 1: " + solve(input).max())
     println("part 2: " + solve(input).sorted().takeLast(3).sum())
 }
-

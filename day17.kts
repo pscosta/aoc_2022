@@ -1,6 +1,6 @@
 import java.io.File
 
-val jets = File("s17.txt").readText().toList()
+val jets = File("input/s17.txt").readText().toList()
 val cave = mutableMapOf<Int, MutableMap<Int, Any>>()
 val caveWidth = 7
 val rockTypes = listOf(

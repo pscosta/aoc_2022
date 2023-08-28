@@ -10,7 +10,7 @@ lateinit var cave: HashMap<Int, HashMap<Int, Any>>
 
 fun loadCave() {
     cave = HashMap()
-    File("14.txt").readLines()
+    File("input/14.txt").readLines()
         .map { line ->
             line.split(" -> ")
                 .map { it.split(",").let { (x, y) -> Point(x.toInt(), y.toInt()) } }

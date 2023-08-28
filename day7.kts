@@ -33,7 +33,7 @@ fun readTerminal(instructions: List<String>) {
 }
 
 fun main() {
-    val instructions = File("s7.txt").readLines()
+    val instructions = File("input/s7.txt").readLines()
     readTerminal(instructions)
     val missing = 30000000 - (70000000 - root.size())
 

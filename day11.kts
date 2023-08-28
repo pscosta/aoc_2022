@@ -2,7 +2,7 @@ import java.io.File
 
 class `🐒`(val items: MutableList<Long>, val op: (Long) -> Long, val div: Long, val t: Int, val f: Int, var sum: Long)
 
-fun monkeys(): List<`🐒`> = File("s11.txt").readLines()
+fun monkeys(): List<`🐒`> = File("input/s11.txt").readLines()
     .chunked(7) {
         val items = it[1].split(": ")[1].split(", ").map { it.toLong() }.toMutableList()
         val div = it[3].split(" by ")[1].toLong()

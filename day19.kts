@@ -132,7 +132,7 @@ fun buildRobots(blueprint: Blueprint, state: State) = mutableListOf(
 ).filterNotNull()
 
 val regex = Regex("""\d+""")
-val bluePrints = File("s19.txt").readLines().map { l ->
+val bluePrints = File("input/s19.txt").readLines().map { l ->
     regex.findAll(l).toList().map { it.value }.map(String::toInt).let {
         Blueprint(it[0], OreRobot(it[1]), ClayRobot(it[2]), ObsidianRobot(it[3], it[4]), GeodeRobot(it[5], it[6]))
     }

@@ -9,7 +9,7 @@ data class Sensor(val x: Int, val y: Int, val bx: Int, val by: Int) {
 fun MatchResult?.ints() = this!!.destructured.toList().map { it.toInt() }
 val regex = Regex("Sensor at x=(-?\\d+), y=(-?\\d+): closest beacon is at x=(-?\\d+), y=(-?\\d+)$")
 
-val sensors = File("s15.txt").readLines()
+val sensors = File("input/s15.txt").readLines()
     .map { regex.find(it).ints().let { (x, y, bx, by) -> Sensor(x, y, bx, by) } }
 
 fun part1(y: Int, points: HashSet<Int> = HashSet()): Int {

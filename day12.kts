@@ -5,7 +5,7 @@ data class Point(val x: Int, val y: Int, val h: Int = 0, var steps: Int = 0)
 lateinit var start: Point
 lateinit var end: Point
 
-fun load() = File("s12.txt")
+fun load() = File("input/s12.txt")
     .readLines()
     .mapIndexed { y, line ->
         line.mapIndexed { x, p ->

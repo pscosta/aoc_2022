@@ -9,7 +9,7 @@ data class Monkey(
     var ops: String? = null
 )
 
-fun load() = File("s21.txt").readLines().map { l ->
+fun load() = File("input/s21.txt").readLines().map { l ->
     val regex = Regex("(\\w+): ((\\d+)|((\\w+) (\\*|\\+|\\-|\\/) (\\w+)))$")
     val m = regex.find(l)!!.destructured.toList().filter { it.isNotEmpty() }
     when (m.size) {

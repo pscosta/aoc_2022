@@ -10,7 +10,7 @@ fun load() {
     instructions = ArrayList()
     stacks = MutableList(9) { mutableListOf() }
 
-    File("s5.txt").readLines()
+    File("input/s5.txt").readLines()
         .forEach {
             when {
                 it.startsWith("[") -> {

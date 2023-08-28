@@ -21,7 +21,7 @@ fun calc(dir: IntProgression, stop: (Int) -> Boolean) = when (val sum = dir.inde
 }
 
 fun main() {
-    val grid = File("s8.txt")
+    val grid = File("input/s8.txt")
         .readLines()
         .map { it.map { c -> c.digitToInt() } }
 

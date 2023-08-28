@@ -16,7 +16,7 @@ fun mix(seed: Int, iterations: Int): Long {
     return listOf(1000, 2000, 3000).sumOf { ints[(zeroIdx + it).mod(ints.size)].v }
 }
 
-val file = File("s20.txt").readLines()
+val file = File("input/s20.txt").readLines()
     .mapIndexed { idx, v -> Pair(idx, v.toLong()) }
 
 fun main() {

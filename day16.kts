@@ -3,7 +3,7 @@ import java.io.File
 data class State(val valve: String, val time: Int, val seenValves: Set<Valve>)
 data class Valve(val name: String, val rate: Int, val next: List<String>)
 
-val valves = File("s16.txt").readLines()
+val valves = File("input/s16.txt").readLines()
     .map {
         val name = it.substringAfter("Valve ").substringBefore(" ")
         val flow = it.substringAfter("rate=").substringBefore(";").toInt()

@@ -19,7 +19,7 @@ class CPU(var strength: Int = 0, var x: Int = 1, var cycle: Int = 0, val hPixels
 }
 
 val ops = mutableListOf<OP>()
-File("s10.txt")
+File("input/s10.txt")
     .readLines()
     .map { it.split(" ") }
     .map { op ->

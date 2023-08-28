@@ -1,6 +1,6 @@
 import java.io.File
 
-val points = File("s18.txt").readLines()
+val points = File("input/s18.txt").readLines()
     .map { it.split(",").let { (x, y, z) -> Point(x.toInt(), y.toInt(), z.toInt()) } }
 
 data class Point(val x: Int, val y: Int, val z: Int) {

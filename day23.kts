@@ -63,7 +63,7 @@ fun countPoints(): Int {
 }
 
 var grid = load()
-fun load() = File("s23.txt").readLines()
+fun load() = File("input/s23.txt").readLines()
     .flatMapIndexed { y, l -> l.mapIndexedNotNull { x, s -> if (s == '#') Point(x, y) to Elf(Point(x, y)) else null } }
     .toMap()
 

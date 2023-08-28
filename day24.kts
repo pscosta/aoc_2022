@@ -19,7 +19,7 @@ data class Storm(var point: Point, var dir: Dir) {
     }
 }
 
-fun load() = File("s24.txt").readLines()
+fun load() = File("input/s24.txt").readLines()
     .flatMapIndexed { y, l ->
         l.mapIndexedNotNull { x, s ->
             when (s) {

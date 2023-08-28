@@ -1,7 +1,7 @@
 import java.io.File
 import kotlin.math.pow
 
-val input = File("s25.txt").readLines().sumOf { toDecimal(it) }
+val input = File("input/s25.txt").readLines().sumOf { toDecimal(it) }
 
 fun toDecimal(snafu: String) = snafu.reversed().mapIndexed { idx, n ->
     "$n".replace(Regex("=$"), "-2").replace(Regex("-$"), "-1").toInt() * 5.0.pow(idx)

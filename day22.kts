@@ -12,7 +12,7 @@ enum class Dir(val value: Int) {
     }
 }
 
-val input = File("s22.txt").readLines()
+val input = File("input/s22.txt").readLines()
 val path = input.dropLast(2)
     .flatMapIndexed { y, l -> l.mapIndexed { x, s -> if (s != ' ') Pt(x, y) to s.toString() else null } }
     .filterNotNull()

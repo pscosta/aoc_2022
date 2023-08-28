@@ -20,7 +20,7 @@ val win = mapOf("B" to "Z", "A" to "Y", "C" to "X")
 val lose = mapOf("B" to "X", "A" to "Z", "C" to "Y")
 
 fun main() {
-    val plays = File("s2.txt").readLines()
+    val plays = File("input/s2.txt").readLines()
         .map { it.split(" ") }
 
     println("part 1: " + plays.sumOf { solve1(it.first(), it.last()) })

@@ -19,7 +19,7 @@ fun Pos.follow(head: Pos) {
     if (head.y < y) y--
 }
 
-val moves = File("s9.txt").readLines()
+val moves = File("input/s9.txt").readLines()
     .map { it.split(" ").let { (dir, s) -> Move(dir, s.toInt()) } }
 
 fun solve(size: Int, tails: HashSet<Pos> = HashSet()): Int {

@@ -1,7 +1,7 @@
 import java.io.File
 
 fun main() {
-    val lines = File("s3.txt").readLines()
+    val lines = File("input/s3.txt").readLines()
 
     val sum1 = lines
         .map { it.substring(0, (it.length / 2)).toSet().intersect(it.substring((it.length / 2), it.length).toSet()) }

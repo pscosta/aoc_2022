@@ -9,7 +9,7 @@ data class PList<T : Any>(val parent: PList<T>? = null) : ArrayList<Any>() {
     override fun hashCode() = super.hashCode()
 }
 
-val packets = File("s13.txt").readLines()
+val packets = File("input/s13.txt").readLines()
     .filter { it.isNotEmpty() }
     .map { packet ->
         val rootPacket = PList<Any>()
