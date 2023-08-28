@@ -33,7 +33,6 @@ fun compare(left: Any, right: Any): Int = when {
         left == right -> 0
         else -> 1
     }
-
     left !is Int && right !is Int -> {
         (left as PList<*>).indices.forEach { i ->
             when (i) {
@@ -45,12 +44,10 @@ fun compare(left: Any, right: Any): Int = when {
         }
         if (left.size < (right as PList<*>).size) -1 else 0
     }
-
     (left !is Int) && right is Int -> compare(left, PList<Any>(right))
-    left is Int && (right !is Int) -> compare(PList<Any>(left), right)
+    left is Int -> compare(PList<Any>(left), right)
     else -> -1
 }
-
 
 fun main() {
     println("part 1: " + packets.chunked(2).mapIndexed { i, (l, r) -> if (compare(l, r) == -1) i + 1 else 0 }.sum())
@@ -58,7 +55,7 @@ fun main() {
     val dividers = listOf(PList(2), PList<Any>(6))
     println("Part 2: " + packets.plus(dividers)
         .sortedWith(this::compare)
-        .mapIndexed { i, it -> if (dividers.contains(it)) i + 1 else 1 }
+        .mapIndexed { i, it -> if (it in dividers) i + 1 else 1 }
         .reduce(Int::times))
 }
 

@@ -4,7 +4,7 @@ data class Pair(var idx: Int, var v: Long)
 
 fun mix(seed: Int, iterations: Int): Long {
     val ints = file.toMutableList()
-    val idxMap = ints.onEach { it.v = it.v * seed }.mapIndexed { idx, pair -> idx to pair }.toMap()
+    val idxMap = ints.onEach { it.v *= seed }.mapIndexed { idx, pair -> idx to pair }.toMap()
     repeat(iterations) {
         idxMap.forEach { (_, v) ->
             val currIdx = ints.indexOf(v)
